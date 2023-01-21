@@ -1,6 +1,5 @@
 import databases
 import sqlalchemy
-
 from decouple import config
 
 DATABASE_URL = f"{config('DB_URL')}"

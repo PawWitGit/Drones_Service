@@ -2,7 +2,7 @@ import sqlalchemy as sqlalchemy
 from db import metadata
 from models.enums import RoleType
 
-users = sqlalchemy.Table(
+user = sqlalchemy.Table(
     "users",
     metadata,
     sqlalchemy.Column("id", sqlalchemy.Integer, primary_key=True),
@@ -15,7 +15,5 @@ users = sqlalchemy.Table(
         "role",
         sqlalchemy.Enum(RoleType),
         nullable=False,
-        server_default=RoleType.drone_pilot.name,
-
     ),
 )

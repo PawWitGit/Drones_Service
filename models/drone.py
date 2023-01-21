@@ -20,7 +20,6 @@ drone = sqlalchemy.Table(
         "status",
         sqlalchemy.Enum(State),
         nullable=False,
-        server_default=State.pending.name,
     ),
     sqlalchemy.Column(
         "drone_pilot_id", sqlalchemy.ForeignKey("users.id"), nullable=False
