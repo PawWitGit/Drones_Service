@@ -9,3 +9,4 @@ class RoleType(enum.Enum):
 class State(enum.Enum):
     created = "created"
     edited = "edited"
+    deleted = "deleted"
